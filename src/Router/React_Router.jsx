@@ -7,7 +7,7 @@ const React_Router = () => {
         {
             path: "/",
             element: <h1 className="text-9xl flex justify-center">HOME PAGE</h1>
-        },
+        }
 
     ]);
 
