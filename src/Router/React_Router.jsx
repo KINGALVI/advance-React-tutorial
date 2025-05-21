@@ -6,26 +6,26 @@ import Data from "../components/Main-Section/Data/Data";
 
 const React_Router = () => {
 
-    // how to create path and path component in react router
+    // how to create path and path component in react router . for that we havet to use react router createBrowserRouter function .
     const router = createBrowserRouter([
 
         {
-            //path declaration
+            //the path declaration . for that we have to use path react router keywords .
             path: "/",
-            //path component
+            //the path component . for that we have to use element react router keywords .
             element: <Main />,
-            //child path and path component declaration
+            // the child path and path component declaration . sometimes we need some dynamic change in website without reaload the the website , for that we have to use react router children keywords .
             children: [
                 {
-                    //child path
+                    // the child path
                     path: "About",
-                    //child path component
+                    // the child path component
                     element: <About />
                 },
                 {
-                    //child path
+                    // the child path
                     path: "Data",
-                    //child path component
+                    // the child path component
                     element: <Data />
                 }
             ]
@@ -35,7 +35,7 @@ const React_Router = () => {
 
     return (
         <>
-            {/* Call react-router */}
+            {/* Call react-router using RouterProvider . */}
             <RouterProvider router={router} />
         </>
     );

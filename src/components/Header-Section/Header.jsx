@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Header = () => {
     return (
         <>
@@ -10,8 +12,8 @@ const Header = () => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                            <li><a href="../Main-Section/About/About.jsx">About</a></li>
-                            <li><a href="../Main-Section/Data/Data.jsx">Data</a></li>
+                            <li><Link to="About">About</Link></li>
+                            <li><Link to="Data">Data</Link></li>
                         </ul>
                     </div>
                     <a className="btn btn-ghost text-xl">KING ALVI</a>
@@ -23,8 +25,11 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
-                    <span className="pl-3"><a className="btn">Search</a></span>
+                    <input
+                        type="text"
+                        placeholder="Search"
+                        className="input input-bordered join-item w-52" />
+                    <button className="btn btn-primary join-item">Search</button>
                 </div>
             </div>
         </>
