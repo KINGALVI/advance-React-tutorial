@@ -2,7 +2,7 @@
 import { createBrowserRouter, RouterProvider, } from "react-router-dom";
 import Main from "../components/Main-Section/Main/Main";
 import About from "../components/Main-Section/About/About";
-import Data from "../components/Main-Section/Data/Data";
+import AllUser from "../components/Main-Section/Data/AllUser";
 
 const React_Router = () => {
 
@@ -25,8 +25,10 @@ const React_Router = () => {
                 {
                     // the child path
                     path: "Data",
+                    // how to load json or API data in react router .
+                    loader: () => fetch('https://jsonplaceholder.typicode.com/users'),
                     // the child path component
-                    element: <Data />
+                    element: <AllUser />
                 }
             ]
         }
