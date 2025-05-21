@@ -5,6 +5,7 @@ function App() {
 
   return (
     <>
+    {/* Declare React Router Component */}
       <React_Router />
     </>
   )
