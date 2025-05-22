@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import "./Header.css"
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
     return (
@@ -12,16 +13,17 @@ const Header = () => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                            <li><Link to="About">About</Link></li>
-                            <li><Link to="Data">Data</Link></li>
+                            {/* it is a advance navlink . when we click the navlink , the navlink style will change . ( if we give the navlink some style by useing css . ) */}
+                            <li><NavLink to="/About">About</NavLink></li>
+                            <li><NavLink to="/Data">Data</NavLink></li>
                         </ul>
                     </div>
                     <a className="btn btn-ghost text-xl">KING ALVI</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li><Link to="/About">About</Link></li>
-                        <li><Link to="/Data">Data</Link></li>
+                        <li><NavLink to="/About">About</NavLink></li>
+                        <li><NavLink to="/Data">Data</NavLink></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
