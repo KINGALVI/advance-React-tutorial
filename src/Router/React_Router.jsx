@@ -20,26 +20,26 @@ const React_Router = () => {
             // the child path and path component declaration . sometimes we need some dynamic change in website without reaload the the website , for that we have to use react router children keywords .
             children: [
                 {
-                    // the child path
+                    // the child path .
                     path: "About",
 
-                    // the child path component
+                    // the child path component .
                     element: <About />
                 },
                 {
-                    // the child path
+                    // the child path .
                     path: "Data",
 
                     // how to load json or API data in react router .
                     loader: () => fetch('https://jsonplaceholder.typicode.com/users'),
 
-                    // the child path component
+                    // the child path component .
                     element: <AllUser />
                 },
 
                 // if we wanned to make Dynamic Route we need to follow thsi react router mehtod .
                 {
-                    // dynamic path 
+                    // dynamic path .
                     path: "/Data/:SingleUserDetail",
 
                     // how to load dynamic json or API in react router .
