@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider, } from "react-router-dom";
 import Main from "../components/Main-Section/Main/Main";
 import About from "../components/Main-Section/About/About";
 import AllUser from "../components/Main-Section/Data/AllUser";
+import SingleUserDetail from "../components/Main-Section/Data/SingleUserDetail";
 
 const React_Router = () => {
 
@@ -34,6 +35,18 @@ const React_Router = () => {
 
                     // the child path component
                     element: <AllUser />
+                },
+
+                // if we wanned to make Dynamic Route we need to follow thsi react router mehtod .
+                {
+                    // dynamic path 
+                    path: "/Data/:SingleUserDetail",
+
+                    // how to load dynamic json or API in react router .
+                    loader: ({ params }) => fetch(`https://jsonplaceholder.typicode.com/users/${params.SingleUserDetail}`),
+
+                    //show dynamic component .
+                    element: <SingleUserDetail />
                 }
             ]
         }

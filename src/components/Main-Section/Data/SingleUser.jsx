@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const SingleUser = ({ SingelUserData }) => {
 
@@ -34,6 +35,14 @@ const SingleUser = ({ SingelUserData }) => {
                         </tr>
                     </tbody>
                     <tfoot>
+                        <br />
+                        <tr>
+                            <td colSpan="8" className="text-center">
+                                <Link to={`/Data/${id}`}>
+                                    <button className="btn btn-primary">Show Detail</button>
+                                </Link>
+                            </td>
+                        </tr>
                         <br /><br />
                     </tfoot>
                 </table>
