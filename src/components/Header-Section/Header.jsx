@@ -1,4 +1,9 @@
 import "./Header.css"
+import PropTypes from "prop-types";
+
+//***** Import NavLink for Navigation *****//
+// NavLink is used instead of Link because it provides an "active state" feature.
+// When a user clicks on a NavLink, its style can change dynamically based on the active route.
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
@@ -13,7 +18,9 @@ const Header = () => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                            {/* it is a advance navlink . when we click the navlink , the navlink style will change . ( if we give the navlink some style by useing css . ) */}
+                            {/***** NavLink Usage Explanation *****/}
+                            {/* NavLink dynamically changes styles when the user navigates to a specific route. */}
+                            {/* If we provide custom styles in CSS, NavLink updates them when active. */}
                             <li><NavLink to="/About">About</NavLink></li>
                             <li><NavLink to="/Data">Data</NavLink></li>
                         </ul>
@@ -22,6 +29,9 @@ const Header = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
+                        {/***** NavLink Usage Explanation *****/}
+                        {/* NavLink dynamically changes styles when the user navigates to a specific route. */}
+                        {/* If we provide custom styles in CSS, NavLink updates them when active. */}
                         <li><NavLink to="/About">About</NavLink></li>
                         <li><NavLink to="/Data">Data</NavLink></li>
                     </ul>
@@ -35,7 +45,16 @@ const Header = () => {
                 </div>
             </div>
         </>
-    );
-};
+    )
+}
+
+Header.propTypes = {
+    menuLinks: PropTypes.arrayOf(
+        PropTypes.shape({
+            path: PropTypes.string.isRequired,
+            label: PropTypes.string.isRequired
+        })
+    ).isRequired
+}
 
 export default Header;

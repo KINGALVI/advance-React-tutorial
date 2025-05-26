@@ -17,7 +17,7 @@ const About = () => {
                 <div className="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
             </div>
         </>
-    );
+    )
 }
 
 export default About;

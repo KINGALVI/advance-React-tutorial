@@ -42,7 +42,7 @@ const Footer = () => {
                 </aside>
             </footer>
         </>
-    );
-};
+    )
+}
 
 export default Footer;

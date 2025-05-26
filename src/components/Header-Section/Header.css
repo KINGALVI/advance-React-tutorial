@@ -1,3 +1,6 @@
+/***** Defines styles for active navigation links *****/
+/* When a NavLink is clicked in React Router, it receives the "active" class */
+/* This CSS rule ensures that active links have a blue background */
 a.active {
     background-color: blue;
 }
