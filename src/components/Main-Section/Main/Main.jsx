@@ -9,13 +9,13 @@ import Footer from "../../Footer-Section/Footer";
 
 const Main = () => {
 
-    // ✅ Checking the fetch data condition using `useNavigation()`
+    //***** Checking the fetch data condition using `useNavigation()` *****//
     // `useNavigation()` helps monitor the navigation state in React Router.
     // It can detect whether a page is currently being loaded, making it useful for showing loaders.
     const Navigation = useNavigation();
     console.log(Navigation);
 
-    // ✅ Managing path-related functionality using `useLocation()`
+    //***** Managing path-related functionality using `useLocation()` *****//
     // `useLocation()` provides details about the current URL.
     // If the app needs to perform actions based on route changes, this hook helps track the active path.
     const Location = useLocation();
