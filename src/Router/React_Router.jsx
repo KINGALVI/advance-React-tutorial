@@ -9,6 +9,7 @@ import About from "../components/Main-Section/About/About";
 import AllUser from "../components/Main-Section/Data/AllUser";
 import SingleUserDetail from "../components/Main-Section/Data/SingleUserDetail";
 import ErrorHandel from "../components/HandelError/ErrorHandel";
+import From from "../components/From/From";
 
 const React_Router = () => {
 
@@ -69,6 +70,11 @@ const React_Router = () => {
 
                     //***** Assign Component to Show Dynamic User Details *****//
                     element: <SingleUserDetail />
+                },
+
+                {
+                    path: '/From',
+                    element: <From />
                 }
             ]
         }
