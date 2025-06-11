@@ -4,8 +4,8 @@
 // 'useNavigation' Tracks navigation state, allowing for loaders during page transitions.
 import { Outlet, useLocation, useNavigation } from "react-router-dom";
 
-import Header from "../../Header-Section/Header";
-import Footer from "../../Footer-Section/Footer";
+import Header from "../Header-Section/Header";
+import Footer from "../Footer-Section/Footer";
 
 const Main = () => {
 

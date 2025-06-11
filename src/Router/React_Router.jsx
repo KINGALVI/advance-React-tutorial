@@ -4,12 +4,12 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import PropTypes from "prop-types";
-import Main from "../components/Main-Section/Main/Main";
-import About from "../components/Main-Section/About/About";
-import AllUser from "../components/Main-Section/Data/AllUser";
-import SingleUserDetail from "../components/Main-Section/Data/SingleUserDetail";
+import Main from "../components/Main-Section/MainSection";
+import About from "../components/Main-Section/Main-Section-Components/About/About";
+import AllUser from "../components/Main-Section/Main-Section-Components/Data/AllUser";
+import SingleUserDetail from "../components/Main-Section/Main-Section-Components/Data/SingleUserDetail";
 import ErrorHandel from "../components/HandelError/ErrorHandel";
-import From from "../components/From/From";
+import From from "../components/Main-Section/Main-Section-Components/From/From";
 
 const React_Router = () => {
 
