@@ -182,12 +182,12 @@ const From = () => {
                 <input
                     type="text"
 
-                    // ✅ `defaultValue` is used to display a pre-filled value in the input field.
+                    // `defaultValue={}` is used to display a pre-filled value in the input field. 
                     // Unlike `value`, `defaultValue` allows the field to remain editable.
                     // Example: This input will initially display "Your Name" until the user changes it.
                     defaultValue={'Your Name'}
 
-                    // ✅ Using `useRef()` to reference this input field
+                    // Using `ref={}` to reference this input field
                     // This enables direct manipulation of the input element without relying on React state.
                     ref={NameRef}
 
