@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import useArrayHookInputState from "./Hooks/ArrayHook";
 import useObjectHookInputState from "./Hooks/ObjectHook";
+import ReusableFrom from "./ReusableFrom/ReusableFrom";
 
 const From = () => {
 
@@ -99,23 +100,43 @@ const From = () => {
 
 
 
-    ///// hook element : use hook system to controlled the input field ////
+    ///// costom hook element : use costom hook system to controlled the input field ////
 
-    const [HookName, handelHookName] = useArrayHookInputState('Hook Name')
+    // Array custom hook
+    const [ArrayHookName, ArrayhandelHookName] = useArrayHookInputState('Hook Name')
 
-    const HookEmail = useObjectHookInputState('HookEmail@alvi.com')
+    // Object custom hook
+    const ObjectHookEmail = useObjectHookInputState('HookEmail@alvi.com')
+    const ObjecthookEmail = ObjectHookEmail.Value
 
 
+    //show the custom hook information
     const [HookInformation, handelHookInformation] = useState([])
 
     const hendelHookFieldSubmit = events => {
 
         events.preventDefault()
 
-        const hookEmail = HookEmail.Value
+        handelHookInformation({ ArrayHookName, ObjecthookEmail })
 
-        handelHookInformation({ HookName, hookEmail })
+    }
 
+
+
+
+
+
+
+
+
+    {/***** Reusable element : Reusable system are use singel input field for various work Like login, signup etc *****/ }
+
+    const handelSignUpFrom = Data => {
+        console.log('Sign Up Information', Data)
+    }
+
+    const handelLogInFrom = Data => {
+        console.log('Log In Inforamtion', Data)
     }
 
     return (
@@ -219,23 +240,25 @@ const From = () => {
 
 
 
-            {/***** hook element : use hook system to controlled the input field *****/}
+            {/***** hook element : use costom hook system to controlled the input field *****/}
 
             <center className="text-5xl">Hook Element</center>
             <br /><br />
             <form className="flex justify-center" onSubmit={hendelHookFieldSubmit}>
 
+                {/* Array custom hook */}
                 <input
                     type="text"
-                    value={HookName}
-                    onChange={handelHookName}
+                    value={ArrayHookName}
+                    onChange={ArrayhandelHookName}
                     placeholder="Search"
                     className="input input-bordered join-item w-52"
                 />
 
+                {/* Object custom hook */}
                 <input
                     type="email"
-                    {...HookEmail}
+                    {...ObjectHookEmail}
                     placeholder="Email"
                     className="input input-bordered join-item w-52" />
 
@@ -250,12 +273,35 @@ const From = () => {
             <br />
 
             <center>
-                {HookInformation.HookName}
+                {HookInformation.ArrayHookName}
                 <br /><br />
-                {HookInformation.hookEmail}
+                {HookInformation.ObjecthookEmail}
             </center>
 
             <br /><br /><br /><br /><br />
+
+
+
+
+
+
+
+
+
+            {/***** Reusable element : Reusable system are use singel input field for various work Like login, signup etc *****/}
+
+            {/* Reusable Element Example  */}
+            <ReusableFrom FromTitel={'Reusable Element'} Context={'Sign Up'} FromButton={'Sign In'} hendelReusableFieldSubmit={handelSignUpFrom} />
+
+            {/* Reusable Element Example  */}
+            <ReusableFrom FromTitel={'Reusable Element'} Context={'Log In'} FromButton={'Log In'} hendelReusableFieldSubmit={handelLogInFrom} />
+
+            {/* Default Reusable Element Example  */}
+            <ReusableFrom />
+
+            {/* children Reusable Element Example  */}
+            <ReusableFrom FromTitel={'children Reusable Element'} Context={'children Element'}> <center className="text-2xl pt-5"><i><b>This is children Component</b></i></center> </ReusableFrom>
+
         </>
     );
 };
