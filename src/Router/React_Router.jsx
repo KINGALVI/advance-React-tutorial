@@ -10,7 +10,7 @@ import AllUser from "../components/Main-Section/Main-Section-Components/Data/All
 import SingleUserDetail from "../components/Main-Section/Main-Section-Components/Data/SingleUserDetail";
 import ErrorHandel from "../components/HandelError/ErrorHandel";
 import From from "../components/Main-Section/Main-Section-Components/From/From";
-import ContexAPI from "../components/Main-Section/Main-Section-Components/ContexAPI/ContexAPI";
+import ContextAPI from "../components/Main-Section/Main-Section-Components/ContexAPI/ContextAPI";
 
 const React_Router = () => {
 
@@ -79,8 +79,8 @@ const React_Router = () => {
                 },
 
                 {
-                    path: '/ContexAPI',
-                    element: <ContexAPI />
+                    path: '/ContextAPI',
+                    element: <ContextAPI />
                 }
             ]
         }

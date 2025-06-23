@@ -6,7 +6,7 @@ const Dad = () => {
     return (
         <>
             <h1 className="text-4xl text-center">Father</h1>
-            <div className="DadContexAPI">
+            <div className="DadContextAPI">
                 <Son />
                 <Daughter />
             </div>

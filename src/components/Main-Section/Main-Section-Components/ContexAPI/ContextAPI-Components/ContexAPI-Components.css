@@ -1,4 +1,4 @@
-.DadContexAPI {
+.DadContextAPI {
     border: 2px solid rgb(76, 209, 147);
     margin: 15px;
     padding: 15px;
@@ -7,7 +7,7 @@
     justify-content: center;
 }
 
-.ContexAPI-Components {
+.ContextAPI-Components {
     border: 2px solid tan;
     margin: 15px;
     padding: 15px;
