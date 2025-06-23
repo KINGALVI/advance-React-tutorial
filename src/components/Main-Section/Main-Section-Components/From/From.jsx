@@ -300,7 +300,7 @@ const From = () => {
             <ReusableFrom />
 
             {/* children Reusable Element Example  */}
-            <ReusableFrom FromTitel={'children Reusable Element'} Context={'children Element'}> <center className="text-2xl pt-5"><i><b>This is children Component</b></i></center> </ReusableFrom>
+            <ReusableFrom FromTitel={'children Reusable Element'} Context={'children Element'} FromButton={'Children Submit'}> <center className="text-2xl pt-5"><i><b>This is children Component</b></i></center> </ReusableFrom>
 
         </>
     );
