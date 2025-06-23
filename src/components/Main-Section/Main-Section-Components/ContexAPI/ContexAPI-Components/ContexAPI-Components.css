@@ -1,0 +1,15 @@
+.DadContexAPI {
+    border: 2px solid rgb(76, 209, 147);
+    margin: 15px;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.ContexAPI-Components {
+    border: 2px solid tan;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 15px;
+}

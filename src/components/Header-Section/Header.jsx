@@ -24,6 +24,7 @@ const Header = () => {
                             <li><NavLink to="/About">About</NavLink></li>
                             <li><NavLink to="/Data">Data</NavLink></li>
                             <li><NavLink to="/From">From</NavLink></li>
+                            <li><NavLink to="/ContexAPI">Contex API</NavLink></li>
                         </ul>
                     </div>
                     <a className="btn btn-ghost text-xl">KING ALVI</a>
@@ -36,6 +37,7 @@ const Header = () => {
                         <li><NavLink to="/About">About</NavLink></li>
                         <li><NavLink to="/Data">Data</NavLink></li>
                         <li><NavLink to="/From">From</NavLink></li>
+                        <li><NavLink to="/ContexAPI">Contex API</NavLink></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
